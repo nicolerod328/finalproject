@@ -1,0 +1,119 @@
+<!doctype html>
+<html amp lang="en">
+ <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Teens for Alzheimer's</title>
+    <link rel="canonical" href="http://localhost/documentation/guides-and-tutorials/start/create/basic_markup">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+
+
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+    }
+    .tab button:hover {
+      background-color: #ddd;
+    }
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+
+</style>
+  </head>
+  <body>
+    <h1>Welcome to Teens for Alzheimers!</h1>
+
+    <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Homepage')"
+    id="defaultOpen">Homepage</button>
+  <button class="tablinks" onclick="openCity(event, 'Educate')">Educate</button>
+  <button class="tablinks" onclick="openCity(event, 'Appreciate')">Appreciate</button>
+  <button class="tablinks" onclick="openCity(event, 'Advocate')">Advocate</button>
+  <button class="tablinks" onclick="openCity(event, 'Donate')">Donate</button>
+</div>
+
+<div id="Homepage" class="tabcontent">
+  <h3>Homepage</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Educate" class="tabcontent">
+  <h3>Educate</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Appreciate" class="tabcontent">
+  <h3>Appreciate</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Advocate" class="tabcontent">
+  <h3>Advocate</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Donate" class="tabcontent">
+  <h3>Donate</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+
+
+
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+  </body>
+</html>
