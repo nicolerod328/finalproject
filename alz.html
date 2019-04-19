@@ -66,6 +66,10 @@
   height: 100%;
 }
 
+h1{
+  font-family: Trebuchet MS
+}
+
 h3 {
 	 position: relative;
 	top: -100px;
@@ -75,7 +79,7 @@ h3 {
 
 p{
   position: relative;
-  top: -90px;
+  top: -105px;
   left: 110px;
   font-family: Trebuchet MS
 }
@@ -87,7 +91,7 @@ p{
 #Donate {background-color: #8863ed;}
 
 .sidenav {
-  height: 18%;
+  height: 33%;
   width: 120px;
   position: fixed;
   z-index: 1;
@@ -134,8 +138,8 @@ p{
 
 <div id="Homepage" class="tabcontent">
 <div class="sidenav">
-  <a href="#">About</a>
-  <a href="#">Contact</a>
+   <a href="#">About</a>
+   <a href="#">Contact</a>
 </div>
   <h3>Homepage</h3>
   <p>London is the capital city of England.</p>
@@ -155,8 +159,8 @@ p{
 
 <div id="Appreciate" class="tabcontent">
 <div class="sidenav">
-  <a href="#">How can you care for someone with the disease?</a>
-  <a href="#">What is it like to live with the disease?</a>
+  <a href="#">How to care for someone with the disease</a>
+  <a href="#">Life with Alzheimer's</a>
 </div>
   <h3>Appreciate</h3>
   <p>London is the capital city of England.</p>
@@ -182,9 +186,8 @@ p{
 </div>
 
 
-
-
 <script>
+
 function openTab(section, element, color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -201,6 +204,7 @@ function openTab(section, element, color) {
   evt.currentTarget.className += " active";
 }
 document.getElementById("defaultOpen").click();
+
 </script>
 
 
