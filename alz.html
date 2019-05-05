@@ -1,13 +1,15 @@
 <!doctype html>
 <html amp lang="en">
  <head>
+
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>Teens for Alzheimer's</title>
     <link rel="canonical" href="http://localhost/documentation/guides-and-tutorials/start/create/basic_markup">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
-
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js">
+<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js">
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
@@ -22,6 +24,7 @@
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <style amp-custom>
+
     .tab {
       overflow: hidden;
       border: 1px solid #ccc;
@@ -55,7 +58,7 @@
   padding: 16px 16px;
   font-size: 18px;
   width: 20%;
-  font-family: Trebuchet MS
+  font-family: Palatino
 }
 
 .tablink:hover {
@@ -69,21 +72,23 @@
 }
 
 h1{
-  font-family: Trebuchet MS
+  font-family: Palatino
 }
 
 h3 {
 	 position: relative;
+   font-size: 25px;
 	top: -100px;
-	left: 110px;
-  font-family: Trebuchet MS
+	left: 0px;
+  font-family: Palatino
 }
 
 p{
   position: relative;
+  font-size: 18px;
   top: -105px;
-  left: 110px;
-  font-family: Trebuchet MS
+  left: 0px;
+  font-family: Palatino
 }
 
 #Homepage {background-color: #8863ed;}
@@ -96,15 +101,17 @@ p{
 
 
 .sidenav {
-  height: 33%;
-  width: 120px;
-  position: fixed;
+  float: left;
+  position: relative;
+  right: 20px;
+  top:-100px;
+  height: 160px;
+  width: 130px;
   z-index: 1;
-  top: 135px;
-  left: 0;
   background-color:black;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 10px;
+
 }
 
 .sidenav a {
@@ -113,14 +120,14 @@ p{
   font-size: 18px;
   color: white;
   display: block;
-  font-family: Trebuchet MS
+  font-family: Palatino
 }
 .sidenav a:hover {
   color: #8863ed;
 }
 .main {
-  margin-left: 160px;
-  padding: 0px 10px;
+  margin-left: 10px;
+  padding: 10px 10px;
 }
 
 
@@ -134,25 +141,37 @@ p{
 
 
     <div class="tab">
-  <button class="tablink" onclick="openTab('Homepage', this, 'purple')"
+  <button class="tablink" onclick="openTab('Homepage', this)"
     id="defaultOpen">Homepage</button>
-  <button class="tablink" onclick="openTab('Educate', this, 'green')">Educate</button>
-  <button class="tablink" onclick="openTab('Appreciate', this, 'blue')">Appreciate</button>
-  <button class="tablink" onclick="openTab('Advocate', this, 'red')">Advocate</button>
-  <button class="tablink" onclick="openTab('Donate', this, 'blue')">Donate</button>
+  <button class="tablink" onclick="openTab('Educate', this)">Educate</button>
+  <button class="tablink" onclick="openTab('Appreciate', this)">Appreciate</button>
+  <button class="tablink" onclick="openTab('Advocate', this)">Advocate</button>
+  <button class="tablink" onclick="openTab('Donate', this)">Donate</button>
 </div>
 
 
 
-<div id="Homepage" class="tabcontent">
+ <div id="Homepage" class="tabcontent">
 <div class="sidenav">
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
   </div>
   <h3>Homepage</h3>
-  <p>blah blah.</p>
+  <p>Welcome to <strong>Teens for Alzheimers! </strong><br>
+   This website is intended to be a resource for teens that are passionate about finding a cure and want to do anything to help.
+   Our generation has to work to find a cure so we can prevent it from affecting anybody else, including us.<br>
+   Being educated about the disease is crucial to finding a cure more quickly and efficiently.<br><br><br>There are four approaches to doing so: <br>
+   -<strong>edcuating</strong> yourself and others <br>
+   -<strong>appreciating</strong> and understanding those living with the disease <br>
+   -<strong>advocating</strong> for a cure <br>
+   -<strong>donating</strong> or raising funds to go to research<br><br>
+   <amp-img alt="alz.jpg"
 
-
+   style="width:400px;height:225px;"
+    src="alz.jpg"
+    layout= "responsive">
+    </amp-img>
+   </p>
 </div>
 
 
@@ -199,7 +218,7 @@ p{
 <script>
 
 function openTab(section, element, color) {
-  var i, tabcontent, tablinks;
+  var i, tabcontent, tablinks, evt;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -217,8 +236,5 @@ document.getElementById("defaultOpen").click();
 
 
 </script>
-
-
-
   </body>
 </html>
