@@ -1,19 +1,17 @@
 <!doctype html>
 <html amp lang="en">
+<html ⚡>
  <head>
 
     <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js">
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <title>Teens for Alzheimer's</title>
-    <link rel="canonical" href="http://localhost/documentation/guides-and-tutorials/start/create/basic_markup">
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
-<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js">
-<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js">
-<script async custom-element="amp-dailymotion" src="https://cdn.ampproject.org/v0/amp-dailymotion-0.1.js">
-<script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js">
-<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js">
-<script async src="https://cdn.ampproject.org/v0.js">
+
+
       {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
@@ -101,7 +99,10 @@ p{
 #Advocate {background-color: #8863ed;}
 #Donate {background-color: #8863ed;}
 
-
+amp-img{
+  background-color:white;
+  border: 2px solid black;
+}
 
 a{
   color: black;
@@ -110,12 +111,6 @@ a{
 a:hover{
   color: white;
 }
-
-
-
-
-
-
 
 .sidenav {
   float: left;
@@ -146,9 +141,6 @@ a:hover{
   margin-left: 10px;
   padding: 10px 10px;
 }
-
-
-
 
 </style>
   </head>
@@ -192,6 +184,7 @@ a:hover{
 </div>
 
 
+
 <div id="Educate" class="tabcontent">
 <div class="sidenav">
   <a href="#">What is Alzheimer's?</a>
@@ -225,13 +218,12 @@ But, scientists still don’t know how these affect Alzheimer’s disease, but t
    -Every <strong>65</strong> seconds someone in the United States develops the disease <br>
    -In 2019, Alzheimer’s and other dementias will cost the US <strong>290 billion,</strong> and by 2050 these can rise to <strong>1.1 trillion </strong><br>
    -<strong>1 in 10 </strong> Americans over the age of 65 has alzheimer's <br>
-
-
-    <amp-img alt="signs.jpg"
-    style="width:200px;height:200px;"
-     src="signs.jpg"
-     layout= "responsive">
-   </amp-img></p>
+   <amp-img alt="signs.jpg"
+   style="width:400px;height:225px;"
+    src="signs.jpg"
+    layout= "responsive">
+    </amp-img>
+  </p>
 </div>
 
 
@@ -249,21 +241,14 @@ But, scientists still don’t know how these affect Alzheimer’s disease, but t
   -Empathize and show them compassion <br>
   -Understand the disease and how they are living <br><br><br>
 <strong> What is it like to Live with the Disease?</strong><br>
-<amp-dailymotion
-  data-videoid="https://www.youtube.com/watch?v=bLzO1zVvglQ"
-  layout="responsive"
-  width="480" height="270"></amp-dailymotion>
 
-  <amp-youtube
-    data-videoid="bLzO1zVvglQ"
-    layout="responsive"
-    width="480" height="270"></amp-youtube>
-    <amp-img
-      src="signs.jpg"
-      placeholder
-      layout="fill"
-      />
-  </amp-youtube>
+<amp-youtube width="480"
+  height="270"
+  layout="responsive"
+  data-videoid="bLzO1zVvglQ">
+</amp-youtube>
+
+
 
 
   </p>
